@@ -1,0 +1,92 @@
+{
+  "roblox_register": {
+    "public_key": "A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
+    "host": "roblox-api.arkoselabs.com",
+    "version": "4.2.2",
+    "build_id": "3599826e-0e83-4310-857a-76590a8cf96d",
+    "enforcement_hash": "aa7c59e710093b8a0016360fee0739d0",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T00:00:00Z"
+  },
+  "roblox_login": {
+    "public_key": "476068BF-9607-4799-B53D-366BE98E2B84",
+    "host": "roblox-api.arkoselabs.com",
+    "version": null,
+    "build_id": null,
+    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "roblox_join": {
+    "public_key": "63E4117F-E727-42B4-6DAA-C8448E9B137F",
+    "host": "roblox-api.arkoselabs.com",
+    "version": "4.2.2",
+    "build_id": "3599826e-0e83-4310-857a-76590a8cf96d",
+    "enforcement_hash": "aa7c59e710093b8a0016360fee0739d0",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "roblox_recovery": {
+    "public_key": "ED4A4D58-CF92-4B91-95B9-D2B47B85D54E",
+    "host": "roblox-api.arkoselabs.com",
+    "version": null,
+    "build_id": null,
+    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "x_register": {
+    "public_key": "2CB16598-CB82-4CF7-B332-5990DB66F3AB",
+    "host": "client-api.arkoselabs.com",
+    "version": "4.2.2",
+    "build_id": "3599826e-0e83-4310-857a-76590a8cf96d",
+    "enforcement_hash": "aa7c59e710093b8a0016360fee0739d0",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "uber_login": {
+    "public_key": "2DDF8B30-5FB1-4DA8-A1AA-CFAFB8C5121E",
+    "host": "client-api.arkoselabs.com",
+    "version": null,
+    "build_id": null,
+    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "match_login": {
+    "public_key": "E8A75615-1CBA-5DFF-8032-D16BCF234E10",
+    "host": "client-api.arkoselabs.com",
+    "version": null,
+    "build_id": null,
+    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "snapchat_register": {
+    "public_key": "E45A9667-F0AD-4205-A0C0-DE73E04BC92F",
+    "host": "client-api.arkoselabs.com",
+    "version": null,
+    "build_id": null,
+    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  },
+  "adobe_register": {
+    "public_key": "82F5BC68-F5E9-4F1A-B188-A09F90AC2BB1",
+    "host": "client-api.arkoselabs.com",
+    "version": null,
+    "build_id": null,
+    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "fetched_at": "2026-05-23T21:46:06Z",
+    "previous_enforcement_hash": null,
+    "changed_at": "2026-05-23T21:46:06Z"
+  }
+}

@@ -1,0 +1,39 @@
+name: Track Arkose api.js
+on:
+  schedule:
+    # Every 15 minutes — same cadence as sexfrance/Funcaptcha-Version-Tracker.
+    # Arkose has historically pushed updates within hours of Chrome releases
+    # so we want to catch a rotation within ~30 min worst case.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [tracker.py]
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run tracker
+        run: python tracker.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "arkose-tracker-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain versions.json data/)" ]]; then
+            git add versions.json data/
+            git commit -m "track: update versions.json at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          else
+            echo "No changes."
+          fi

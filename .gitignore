@@ -1,0 +1,16 @@
+# macOS / Windows / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Tracker output we DO want committed: versions.json, data/*.js
+# Tracker output we DON'T want committed: any local-only logs
+*.log
