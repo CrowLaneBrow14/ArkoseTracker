@@ -1,39 +1,171 @@
-name: Track Arkose api.js
+name: Track upstream
+
+# Polls each tracked surface's api.js, parses version / build_id /
+# enforcement_hash, and commits versions.json + an archived snapshot
+# whenever the enforcement_hash actually rotates. The downstream solver
+# reads versions.json raw from GitHub on a 10-min poll AND receives a
+# direct push via /admin/refresh-tracker at the end of every successful
+# rotation commit, so worst-case propagation is seconds, not minutes.
+#
+# Optional repo secrets (all are best-effort — set if you have them):
+#   SOLVER_REFRESH_URL       https://<solver>.hf.space/admin/refresh-tracker
+#   SOLVER_MASTER_PASSWORD   same value as the solver's MASTER_PASSWORD
+#   OPS_WEBHOOK_URL          Discord (or any POST-able) webhook for failures
+
 on:
   schedule:
-    # Every 15 minutes — same cadence as sexfrance/Funcaptcha-Version-Tracker.
-    # Arkose has historically pushed updates within hours of Chrome releases
-    # so we want to catch a rotation within ~30 min worst case.
+    # Every 15 minutes. Upstream rotations cluster around Chrome stable
+    # pushes and land in bursts of 2-4 per day; */15 keeps worst-case
+    # detection latency at ~15 min without burning Actions minutes on
+    # ~99% no-op work.
     - cron: "*/15 * * * *"
+
+  # Manual button for when silent-pass drops and you want to force.
   workflow_dispatch:
+
+  # Re-run when tracker code itself changes so a regex fix lands
+  # immediately instead of waiting for the next quarter-hour.
   push:
     branches: [main]
-    paths: [tracker.py]
+    paths:
+      - tracker.py
+      - .github/workflows/update.yml
 
 permissions:
   contents: write
 
+# Two scheduled runs must never race on push.
+concurrency:
+  group: tracker
+  cancel-in-progress: false
+
 jobs:
   track:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    timeout-minutes: 8
 
-      - uses: actions/setup-python@v5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Run tracker
-        run: python tracker.py
-
-      - name: Commit changes if any
+      - name: Snapshot versions.json before run
         run: |
-          git config user.name "arkose-tracker-bot"
-          git config user.email "bot@users.noreply.github.com"
-          if [[ -n "$(git status --porcelain versions.json data/)" ]]; then
-            git add versions.json data/
-            git commit -m "track: update versions.json at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git push
+          if [[ -f versions.json ]]; then
+            cp versions.json /tmp/versions.before.json
           else
-            echo "No changes."
+            echo "{}" > /tmp/versions.before.json
           fi
+
+      - name: Run tracker
+        id: tracker
+        run: python tracker.py
+        env:
+          PYTHONUNBUFFERED: "1"
+
+      - name: Detect meaningful changes
+        id: diff
+        if: success()
+        run: |
+          # tracker.py rewrites fetched_at every run, so a naive git diff
+          # would churn on every run. Compare only the enforcement_hash
+          # field per endpoint — that's the actual rotation signal.
+          python - <<'PYEOF'
+          import json, os, pathlib
+          before = json.loads(pathlib.Path("/tmp/versions.before.json").read_text() or "{}")
+          after  = json.loads(pathlib.Path("versions.json").read_text() or "{}")
+          rotated = []
+          for name, entry in after.items():
+              prev = before.get(name, {})
+              if prev.get("enforcement_hash") != entry.get("enforcement_hash"):
+                  rotated.append(
+                      f"{name}: {prev.get('enforcement_hash')} -> {entry.get('enforcement_hash')}"
+                  )
+          out = os.environ["GITHUB_OUTPUT"]
+          with open(out, "a") as f:
+              if rotated:
+                  f.write("changed=true\n")
+                  f.write("summary<<__END__\n" + "\n".join(rotated) + "\n__END__\n")
+              else:
+                  f.write("changed=false\n")
+                  f.write("summary=no rotation\n")
+          print("\n".join(rotated) if rotated else "no rotation detected")
+          PYEOF
+
+      - name: Commit and push if rotated
+        if: success() && steps.diff.outputs.changed == 'true'
+        env:
+          ROTATION_SUMMARY: ${{ steps.diff.outputs.summary }}
+        run: |
+          git config user.name  "tracker-bot"
+          git config user.email "tracker-bot@users.noreply.github.com"
+          git add versions.json data/
+          if git diff --cached --quiet; then
+            echo "Nothing actually staged, skipping commit."
+            exit 0
+          fi
+          STAMP="$(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "track: rotation ${STAMP}" -m "${ROTATION_SUMMARY}"
+          # Retry up to 3 times on push race — two scheduled runs CAN
+          # interleave if the prior one barely finished.
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push; then
+              exit 0
+            fi
+            echo "push attempt ${i} failed, retrying..."
+            sleep $((i * 2))
+          done
+          exit 1
+
+      - name: Notify solver of rotation
+        if: success() && steps.diff.outputs.changed == 'true'
+        env:
+          SOLVER_REFRESH_URL: ${{ secrets.SOLVER_REFRESH_URL }}
+          SOLVER_MASTER_PASSWORD: ${{ secrets.SOLVER_MASTER_PASSWORD }}
+        run: |
+          if [[ -z "$SOLVER_REFRESH_URL" || -z "$SOLVER_MASTER_PASSWORD" ]]; then
+            echo "solver refresh secrets not configured — skipping ping (next 10-min poll will catch up)"
+            exit 0
+          fi
+          curl -fsS -m 10 -X POST "$SOLVER_REFRESH_URL" \
+            -H "X-Vault-Auth: $SOLVER_MASTER_PASSWORD" \
+            -H "Content-Type: application/json" \
+            -d '{"source":"gh-action"}' || echo "solver refresh ping failed (non-fatal)"
+
+      - name: Notify on workflow failure
+        if: failure()
+        env:
+          OPS_WEBHOOK_URL: ${{ secrets.OPS_WEBHOOK_URL }}
+        run: |
+          if [[ -z "$OPS_WEBHOOK_URL" ]]; then
+            exit 0
+          fi
+          curl -fsS -m 10 -X POST "$OPS_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"tracker workflow failed: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" || true
+
+      - name: Step summary
+        if: always()
+        env:
+          ROTATION_SUMMARY: ${{ steps.diff.outputs.summary }}
+          CHANGED: ${{ steps.diff.outputs.changed }}
+        run: |
+          {
+            echo "### Tracker run"
+            echo ""
+            echo "- Status: ${{ job.status }}"
+            echo "- Rotation detected: ${CHANGED:-n/a}"
+            if [[ -n "${ROTATION_SUMMARY}" ]]; then
+              echo ""
+              echo '```'
+              echo "${ROTATION_SUMMARY}"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
