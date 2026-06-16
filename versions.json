@@ -3,11 +3,11 @@
     "public_key": "A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
     "host": "roblox-api.arkoselabs.com",
     "version": "4.2.2",
-    "build_id": "1940bd47-76c8-4416-97d5-ae27fd27c952",
-    "enforcement_hash": "3eec627754c7ea25ee08d0dec2119f01",
-    "fetched_at": "2026-06-12T19:26:29Z",
-    "previous_enforcement_hash": "8e9e949cf2397143cf756d81c443e87d",
-    "changed_at": "2026-06-09T23:40:15Z"
+    "build_id": "91cd70be-71bd-4764-8862-fb9665750eb9",
+    "enforcement_hash": "784afd70727e1b4c3c14a078953c41cc",
+    "fetched_at": "2026-06-16T05:28:41Z",
+    "previous_enforcement_hash": "3eec627754c7ea25ee08d0dec2119f01",
+    "changed_at": "2026-06-16T05:28:41Z"
   },
   "roblox_login": {
     "public_key": "476068BF-9607-4799-B53D-366BE98E2B84",
@@ -15,7 +15,7 @@
     "version": null,
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "fetched_at": "2026-06-12T19:26:29Z",
+    "fetched_at": "2026-06-16T05:28:41Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -23,11 +23,11 @@
     "public_key": "63E4117F-E727-42B4-6DAA-C8448E9B137F",
     "host": "roblox-api.arkoselabs.com",
     "version": "4.2.2",
-    "build_id": "1940bd47-76c8-4416-97d5-ae27fd27c952",
-    "enforcement_hash": "3eec627754c7ea25ee08d0dec2119f01",
-    "fetched_at": "2026-06-12T19:26:29Z",
-    "previous_enforcement_hash": "8e9e949cf2397143cf756d81c443e87d",
-    "changed_at": "2026-06-09T23:40:15Z"
+    "build_id": "91cd70be-71bd-4764-8862-fb9665750eb9",
+    "enforcement_hash": "784afd70727e1b4c3c14a078953c41cc",
+    "fetched_at": "2026-06-16T05:28:41Z",
+    "previous_enforcement_hash": "3eec627754c7ea25ee08d0dec2119f01",
+    "changed_at": "2026-06-16T05:28:41Z"
   },
   "roblox_recovery": {
     "public_key": "ED4A4D58-CF92-4B91-95B9-D2B47B85D54E",
@@ -35,7 +35,7 @@
     "version": null,
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "fetched_at": "2026-06-12T19:26:29Z",
+    "fetched_at": "2026-06-16T05:28:41Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -43,11 +43,11 @@
     "public_key": "2CB16598-CB82-4CF7-B332-5990DB66F3AB",
     "host": "client-api.arkoselabs.com",
     "version": "4.2.2",
-    "build_id": "1940bd47-76c8-4416-97d5-ae27fd27c952",
-    "enforcement_hash": "3eec627754c7ea25ee08d0dec2119f01",
-    "fetched_at": "2026-06-12T19:26:29Z",
-    "previous_enforcement_hash": "8e9e949cf2397143cf756d81c443e87d",
-    "changed_at": "2026-06-09T23:40:15Z"
+    "build_id": "91cd70be-71bd-4764-8862-fb9665750eb9",
+    "enforcement_hash": "784afd70727e1b4c3c14a078953c41cc",
+    "fetched_at": "2026-06-16T05:28:41Z",
+    "previous_enforcement_hash": "3eec627754c7ea25ee08d0dec2119f01",
+    "changed_at": "2026-06-16T05:28:41Z"
   },
   "uber_login": {
     "public_key": "2DDF8B30-5FB1-4DA8-A1AA-CFAFB8C5121E",
@@ -55,7 +55,7 @@
     "version": null,
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "fetched_at": "2026-06-12T19:26:29Z",
+    "fetched_at": "2026-06-16T05:28:41Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -65,7 +65,7 @@
     "version": null,
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "fetched_at": "2026-06-12T19:26:29Z",
+    "fetched_at": "2026-06-16T05:28:41Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -75,7 +75,7 @@
     "version": null,
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "fetched_at": "2026-06-12T19:26:29Z",
+    "fetched_at": "2026-06-16T05:28:41Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -85,7 +85,7 @@
     "version": null,
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "fetched_at": "2026-06-12T19:26:29Z",
+    "fetched_at": "2026-06-16T05:28:41Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   }
