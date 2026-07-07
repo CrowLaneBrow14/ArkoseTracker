@@ -56,6 +56,13 @@ USER_AGENT = (
 RE_VERSION = re.compile(r'["\'](\d+\.\d+\.\d+)["\']')
 RE_UUID = re.compile(r'\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\b')
 RE_ENFORCEMENT_HASH = re.compile(r'enforcement\.([0-9a-f]{32})\.html')
+# RSA-2048 SPKI-DER base64 header — the first 44 chars are fixed regardless
+# of the actual modulus. If Arkose embeds the pubkey in the clear (which
+# they've done for years even when XOR-obfuscating the rest of the file),
+# this regex catches it. The full encoded blob is ~344 chars total.
+RE_RSA_SPKI = re.compile(
+    r'(MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA[A-Za-z0-9+/=]{280,360})'
+)
 
 
 def fetch_apijs(public_key: str, host: str, timeout: float = 15.0) -> str:
@@ -67,8 +74,42 @@ def fetch_apijs(public_key: str, host: str, timeout: float = 15.0) -> str:
         return resp.read().decode("utf-8", errors="replace")
 
 
+def _validate_rsa_b64(candidate: str) -> bool:
+    """Round-trip a candidate RSA SPKI-DER base64 string. Returns True only
+    if it decodes to a well-formed RSA-2048 public key. We don't import
+    cryptography here (would balloon the tracker CI deps) — instead we
+    verify the ASN.1 length prefix matches the known RSA-2048 SPKI shape:
+    outer SEQUENCE 0x30 0x82 0x01 0x22 (294 total bytes) OR 0x30 0x81 0x9F
+    for shorter encodings. Both correspond to a 2048-bit modulus."""
+    import base64 as _b64
+    try:
+        candidate = candidate.rstrip("=")
+        candidate = candidate + ("=" * ((-len(candidate)) % 4))
+        der = _b64.b64decode(candidate, validate=False)
+    except Exception:
+        return False
+    if len(der) not in (270, 294):
+        return False
+    # SPKI-DER outer SEQUENCE marker.
+    if not (der.startswith(b"\x30\x82") or der.startswith(b"\x30\x81")):
+        return False
+    return True
+
+
+def extract_rsa_pubkey(js: str) -> str | None:
+    """Extract the RSA-2048 public key from api.js body. Returns None if
+    the pattern misses or no candidate validates."""
+    for m in RE_RSA_SPKI.finditer(js):
+        candidate = m.group(1).rstrip("=")
+        candidate = candidate + ("=" * ((-len(candidate)) % 4))
+        if _validate_rsa_b64(candidate):
+            return candidate
+    return None
+
+
 def parse_apijs(js: str) -> dict:
-    """Extract version, build_id, enforcement_hash from the api.js body.
+    """Extract version, build_id, enforcement_hash, rsa_pubkey_b64 from the
+    api.js body.
 
     Returns a dict with whatever could be extracted; missing fields are
     None so the caller can decide whether to keep or skip the entry.
@@ -76,6 +117,7 @@ def parse_apijs(js: str) -> dict:
     version = None
     build_id = None
     enforcement_hash = None
+    rsa_pubkey_b64 = None
 
     # Version: pick the first SemVer literal — these scripts embed their
     # own version near the top via `version:"4.2.2"` or similar.
@@ -107,10 +149,18 @@ def parse_apijs(js: str) -> dict:
     if m:
         enforcement_hash = m.group(1)
 
+    # RSA pubkey (CAPI v4 envelope). Best-effort — the api.js embed format
+    # is intentionally obfuscated by Arkose, but the SPKI header prefix is
+    # fixed and appears in the clear across versions we've seen. If a
+    # future rotation changes the embedding, the extractor returns None
+    # and the solver's fallbacks (env var or hand-supplied) still work.
+    rsa_pubkey_b64 = extract_rsa_pubkey(js)
+
     return {
         "version": version,
         "build_id": build_id,
         "enforcement_hash": enforcement_hash,
+        "rsa_pubkey_b64": rsa_pubkey_b64,
     }
 
 
@@ -145,6 +195,13 @@ def main() -> int:
 
         prev = previous.get(name, {})
         prev_hash = prev.get("enforcement_hash")
+        # Don't clobber a previously-extracted RSA pubkey with a fresh miss.
+        # Arkose has rotated obfuscation formats before; each format needs
+        # its own extractor pattern. Until the pattern is updated, we want
+        # to keep serving the last-known-good key rather than emit None.
+        rsa_this_run = parsed.get("rsa_pubkey_b64")
+        if not rsa_this_run and prev.get("rsa_pubkey_b64"):
+            parsed["rsa_pubkey_b64"] = prev["rsa_pubkey_b64"]
         entry = {
             "public_key": pk,
             "host": host,
