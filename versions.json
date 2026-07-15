@@ -6,7 +6,7 @@
     "build_id": "e9a6fac9-ac9c-4993-a3a4-9a12ff592f59",
     "enforcement_hash": "32b1dd37782844af9863aff2c72ac984",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": "162a14c47922edcced45ca4d9b28e5d5",
     "changed_at": "2026-07-14T23:30:06Z"
   },
@@ -17,7 +17,7 @@
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -28,7 +28,7 @@
     "build_id": "e9a6fac9-ac9c-4993-a3a4-9a12ff592f59",
     "enforcement_hash": "32b1dd37782844af9863aff2c72ac984",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": "162a14c47922edcced45ca4d9b28e5d5",
     "changed_at": "2026-07-14T23:30:06Z"
   },
@@ -39,20 +39,20 @@
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
   "x_register": {
     "public_key": "2CB16598-CB82-4CF7-B332-5990DB66F3AB",
     "host": "client-api.arkoselabs.com",
-    "version": "4.4.2",
-    "build_id": "24a782f4-d402-40a7-afb8-43f40d591997",
-    "enforcement_hash": "162a14c47922edcced45ca4d9b28e5d5",
+    "version": "4.4.3",
+    "build_id": "e9a6fac9-ac9c-4993-a3a4-9a12ff592f59",
+    "enforcement_hash": "32b1dd37782844af9863aff2c72ac984",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
-    "previous_enforcement_hash": "504897d1cd342e063d4f67d90600cf04",
-    "changed_at": "2026-07-14T05:51:28Z"
+    "fetched_at": "2026-07-15T00:50:38Z",
+    "previous_enforcement_hash": "162a14c47922edcced45ca4d9b28e5d5",
+    "changed_at": "2026-07-15T00:50:38Z"
   },
   "uber_login": {
     "public_key": "2DDF8B30-5FB1-4DA8-A1AA-CFAFB8C5121E",
@@ -61,7 +61,7 @@
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -72,7 +72,7 @@
     "build_id": null,
     "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "changed_at": "2026-07-14T05:51:28Z"
   },
@@ -83,7 +83,7 @@
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   },
@@ -94,7 +94,7 @@
     "build_id": null,
     "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-14T23:30:06Z",
+    "fetched_at": "2026-07-15T00:50:38Z",
     "previous_enforcement_hash": null,
     "changed_at": "2026-05-23T21:46:06Z"
   }
