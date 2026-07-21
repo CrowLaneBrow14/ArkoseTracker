@@ -6,7 +6,7 @@
     "build_id": "4ec0296c-94ff-484c-9787-1df18d2f1ae9",
     "enforcement_hash": "30adcbb9888974d8a5ea64d82f7302c5",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
+    "fetched_at": "2026-07-21T06:39:30Z",
     "previous_enforcement_hash": "32b1dd37782844af9863aff2c72ac984",
     "changed_at": "2026-07-21T04:11:25Z"
   },
@@ -15,11 +15,11 @@
     "host": "roblox-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
-    "previous_enforcement_hash": null,
-    "changed_at": "2026-05-23T21:46:06Z"
+    "fetched_at": "2026-07-21T06:39:30Z",
+    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "changed_at": "2026-07-21T06:39:30Z"
   },
   "roblox_join": {
     "public_key": "63E4117F-E727-42B4-6DAA-C8448E9B137F",
@@ -28,7 +28,7 @@
     "build_id": "4ec0296c-94ff-484c-9787-1df18d2f1ae9",
     "enforcement_hash": "30adcbb9888974d8a5ea64d82f7302c5",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
+    "fetched_at": "2026-07-21T06:39:30Z",
     "previous_enforcement_hash": "32b1dd37782844af9863aff2c72ac984",
     "changed_at": "2026-07-21T04:11:25Z"
   },
@@ -37,11 +37,11 @@
     "host": "roblox-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
-    "previous_enforcement_hash": null,
-    "changed_at": "2026-05-23T21:46:06Z"
+    "fetched_at": "2026-07-21T06:39:30Z",
+    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "changed_at": "2026-07-21T06:39:30Z"
   },
   "x_register": {
     "public_key": "2CB16598-CB82-4CF7-B332-5990DB66F3AB",
@@ -50,7 +50,7 @@
     "build_id": "4ec0296c-94ff-484c-9787-1df18d2f1ae9",
     "enforcement_hash": "30adcbb9888974d8a5ea64d82f7302c5",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
+    "fetched_at": "2026-07-21T06:39:30Z",
     "previous_enforcement_hash": "32b1dd37782844af9863aff2c72ac984",
     "changed_at": "2026-07-21T04:11:25Z"
   },
@@ -59,11 +59,11 @@
     "host": "client-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
-    "previous_enforcement_hash": null,
-    "changed_at": "2026-05-23T21:46:06Z"
+    "fetched_at": "2026-07-21T06:39:30Z",
+    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "changed_at": "2026-07-21T06:39:30Z"
   },
   "match_login": {
     "public_key": "E8A75615-1CBA-5DFF-8032-D16BCF234E10",
@@ -72,7 +72,7 @@
     "build_id": null,
     "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
+    "fetched_at": "2026-07-21T06:39:30Z",
     "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
     "changed_at": "2026-07-14T05:51:28Z"
   },
@@ -81,21 +81,21 @@
     "host": "client-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
-    "previous_enforcement_hash": null,
-    "changed_at": "2026-05-23T21:46:06Z"
+    "fetched_at": "2026-07-21T06:39:30Z",
+    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "changed_at": "2026-07-21T06:39:30Z"
   },
   "adobe_register": {
     "public_key": "82F5BC68-F5E9-4F1A-B188-A09F90AC2BB1",
     "host": "client-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-07-21T04:11:25Z",
-    "previous_enforcement_hash": null,
-    "changed_at": "2026-05-23T21:46:06Z"
+    "fetched_at": "2026-07-21T06:39:30Z",
+    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
+    "changed_at": "2026-07-21T06:39:30Z"
   }
 }
