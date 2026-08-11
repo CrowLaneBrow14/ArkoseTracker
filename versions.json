@@ -3,12 +3,12 @@
     "public_key": "A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
     "host": "roblox-api.arkoselabs.com",
     "version": "4.4.4",
-    "build_id": "6ec5c11b-00bc-4826-a134-2d79e64b496f",
-    "enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
+    "build_id": "c30fcda5-d788-40f0-965e-02f7b7ab1931",
+    "enforcement_hash": "aa99a12eec615cd2d4ce5ad828c73dc8",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
-    "previous_enforcement_hash": "322e74770a8bb938ca07d16f1d6569d1",
-    "changed_at": "2026-08-05T00:51:22Z"
+    "fetched_at": "2026-08-11T05:28:45Z",
+    "previous_enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
+    "changed_at": "2026-08-11T05:28:45Z"
   },
   "roblox_login": {
     "public_key": "476068BF-9607-4799-B53D-366BE98E2B84",
@@ -17,7 +17,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
+    "fetched_at": "2026-08-11T05:28:45Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -25,12 +25,12 @@
     "public_key": "63E4117F-E727-42B4-6DAA-C8448E9B137F",
     "host": "roblox-api.arkoselabs.com",
     "version": "4.4.4",
-    "build_id": "6ec5c11b-00bc-4826-a134-2d79e64b496f",
-    "enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
+    "build_id": "c30fcda5-d788-40f0-965e-02f7b7ab1931",
+    "enforcement_hash": "aa99a12eec615cd2d4ce5ad828c73dc8",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
-    "previous_enforcement_hash": "322e74770a8bb938ca07d16f1d6569d1",
-    "changed_at": "2026-08-05T00:51:22Z"
+    "fetched_at": "2026-08-11T05:28:45Z",
+    "previous_enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
+    "changed_at": "2026-08-11T05:28:45Z"
   },
   "roblox_recovery": {
     "public_key": "ED4A4D58-CF92-4B91-95B9-D2B47B85D54E",
@@ -39,7 +39,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
+    "fetched_at": "2026-08-11T05:28:45Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -47,12 +47,12 @@
     "public_key": "2CB16598-CB82-4CF7-B332-5990DB66F3AB",
     "host": "client-api.arkoselabs.com",
     "version": "4.4.4",
-    "build_id": "6ec5c11b-00bc-4826-a134-2d79e64b496f",
-    "enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
+    "build_id": "c30fcda5-d788-40f0-965e-02f7b7ab1931",
+    "enforcement_hash": "aa99a12eec615cd2d4ce5ad828c73dc8",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
-    "previous_enforcement_hash": "322e74770a8bb938ca07d16f1d6569d1",
-    "changed_at": "2026-08-05T00:51:22Z"
+    "fetched_at": "2026-08-11T05:28:45Z",
+    "previous_enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
+    "changed_at": "2026-08-11T05:28:45Z"
   },
   "uber_login": {
     "public_key": "2DDF8B30-5FB1-4DA8-A1AA-CFAFB8C5121E",
@@ -61,7 +61,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
+    "fetched_at": "2026-08-11T05:28:45Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -72,7 +72,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
+    "fetched_at": "2026-08-11T05:28:45Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-05T00:51:22Z"
   },
@@ -83,7 +83,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
+    "fetched_at": "2026-08-11T05:28:45Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -94,7 +94,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-11T04:14:41Z",
+    "fetched_at": "2026-08-11T05:28:45Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   }
