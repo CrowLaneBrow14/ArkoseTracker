@@ -6,7 +6,7 @@
     "build_id": "6ec5c11b-00bc-4826-a134-2d79e64b496f",
     "enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
+    "fetched_at": "2026-08-11T04:14:41Z",
     "previous_enforcement_hash": "322e74770a8bb938ca07d16f1d6569d1",
     "changed_at": "2026-08-05T00:51:22Z"
   },
@@ -15,11 +15,11 @@
     "host": "roblox-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
-    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "changed_at": "2026-07-21T06:39:30Z"
+    "fetched_at": "2026-08-11T04:14:41Z",
+    "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "changed_at": "2026-08-11T04:14:41Z"
   },
   "roblox_join": {
     "public_key": "63E4117F-E727-42B4-6DAA-C8448E9B137F",
@@ -28,7 +28,7 @@
     "build_id": "6ec5c11b-00bc-4826-a134-2d79e64b496f",
     "enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
+    "fetched_at": "2026-08-11T04:14:41Z",
     "previous_enforcement_hash": "322e74770a8bb938ca07d16f1d6569d1",
     "changed_at": "2026-08-05T00:51:22Z"
   },
@@ -37,11 +37,11 @@
     "host": "roblox-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
-    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "changed_at": "2026-07-21T06:39:30Z"
+    "fetched_at": "2026-08-11T04:14:41Z",
+    "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "changed_at": "2026-08-11T04:14:41Z"
   },
   "x_register": {
     "public_key": "2CB16598-CB82-4CF7-B332-5990DB66F3AB",
@@ -50,7 +50,7 @@
     "build_id": "6ec5c11b-00bc-4826-a134-2d79e64b496f",
     "enforcement_hash": "bc9a239a0c2a7b99d5cd13509a17195e",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
+    "fetched_at": "2026-08-11T04:14:41Z",
     "previous_enforcement_hash": "322e74770a8bb938ca07d16f1d6569d1",
     "changed_at": "2026-08-05T00:51:22Z"
   },
@@ -59,11 +59,11 @@
     "host": "client-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
-    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "changed_at": "2026-07-21T06:39:30Z"
+    "fetched_at": "2026-08-11T04:14:41Z",
+    "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "changed_at": "2026-08-11T04:14:41Z"
   },
   "match_login": {
     "public_key": "E8A75615-1CBA-5DFF-8032-D16BCF234E10",
@@ -72,7 +72,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
+    "fetched_at": "2026-08-11T04:14:41Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-05T00:51:22Z"
   },
@@ -81,21 +81,21 @@
     "host": "client-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
-    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "changed_at": "2026-07-21T06:39:30Z"
+    "fetched_at": "2026-08-11T04:14:41Z",
+    "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "changed_at": "2026-08-11T04:14:41Z"
   },
   "adobe_register": {
     "public_key": "82F5BC68-F5E9-4F1A-B188-A09F90AC2BB1",
     "host": "client-api.arkoselabs.com",
     "version": null,
     "build_id": null,
-    "enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-08-05T00:51:22Z",
-    "previous_enforcement_hash": "cdeb82f474225dff1677448c6bc82e87",
-    "changed_at": "2026-07-21T06:39:30Z"
+    "fetched_at": "2026-08-11T04:14:41Z",
+    "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
+    "changed_at": "2026-08-11T04:14:41Z"
   }
 }
