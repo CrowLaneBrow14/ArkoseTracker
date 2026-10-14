@@ -6,7 +6,7 @@
     "build_id": "9fdbbdc3-859f-44ba-8334-229c279a79f1",
     "enforcement_hash": "45976ef6ebc5b29f650dc7ffed669d04",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "6b24fdc60569ac7c0c502ba987ca6465",
     "changed_at": "2026-10-13T11:14:17Z"
   },
@@ -17,7 +17,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -28,7 +28,7 @@
     "build_id": "9fdbbdc3-859f-44ba-8334-229c279a79f1",
     "enforcement_hash": "45976ef6ebc5b29f650dc7ffed669d04",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "6b24fdc60569ac7c0c502ba987ca6465",
     "changed_at": "2026-10-13T11:14:17Z"
   },
@@ -39,7 +39,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -50,7 +50,7 @@
     "build_id": "ea52f7b4-74f7-49a1-a502-6b3141f59a30",
     "enforcement_hash": "6b24fdc60569ac7c0c502ba987ca6465",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "d2f7926caa3b2ea0a879f385cffe4343",
     "changed_at": "2026-10-13T03:50:41Z"
   },
@@ -61,7 +61,7 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
@@ -72,7 +72,7 @@
     "build_id": "9fdbbdc3-859f-44ba-8334-229c279a79f1",
     "enforcement_hash": "45976ef6ebc5b29f650dc7ffed669d04",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "6b24fdc60569ac7c0c502ba987ca6465",
     "changed_at": "2026-10-13T11:14:17Z"
   },
@@ -83,19 +83,19 @@
     "build_id": null,
     "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
+    "fetched_at": "2026-10-14T01:29:59Z",
     "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
     "changed_at": "2026-08-11T04:14:41Z"
   },
   "adobe_register": {
     "public_key": "82F5BC68-F5E9-4F1A-B188-A09F90AC2BB1",
     "host": "client-api.arkoselabs.com",
-    "version": null,
-    "build_id": null,
-    "enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
+    "version": "4.6.0",
+    "build_id": "9fdbbdc3-859f-44ba-8334-229c279a79f1",
+    "enforcement_hash": "45976ef6ebc5b29f650dc7ffed669d04",
     "rsa_pubkey_b64": null,
-    "fetched_at": "2026-10-13T11:14:17Z",
-    "previous_enforcement_hash": "837917397f9ce5fc720def2e31248537",
-    "changed_at": "2026-08-11T04:14:41Z"
+    "fetched_at": "2026-10-14T01:29:59Z",
+    "previous_enforcement_hash": "6d0c4af962acb40222b82fccf3418258",
+    "changed_at": "2026-10-14T01:29:59Z"
   }
 }
